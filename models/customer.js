@@ -22,13 +22,9 @@ const CustomerSchema = mongoose.Schema(
             type: Number,
             required: true
         },
-        initialChicken: {
-            type: Number,
+        chickenRanges: {
+            type: [String],
             required: true
-        },
-        lastChicken: {
-            type: Number,
-            require: false
         },
         reference: {
             type: String,

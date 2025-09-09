@@ -19,14 +19,14 @@ app.get('/', (req, res) => {
 });
 
 
-// route the customers api
+// router import
 const customersRoute = require('./routes/customers');
+const locationRouter = require('./routes/locations');
+
 
 // use the route
 app.use('/api/customers', customersRoute);
-
-
-
+app.use('/api/locations', locationRouter);
 
 app.listen(PORT, (error) => {
   if(!error) {
